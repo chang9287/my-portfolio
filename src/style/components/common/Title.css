@@ -1,0 +1,8 @@
+.common-Title{
+  font-size: 38px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  font-weight: 600;
+}

@@ -1,0 +1,90 @@
+.contact{
+  width: 100%;
+  height: inherit;
+  /* border: 2px solid blue; */
+  background-color: #fff;
+  position: relative;
+  display: flex;
+}
+.contact-container{
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrap{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 100px;
+}
+/* contact-wrap 전체 적용 */
+.contact-wrap > div{
+  margin-bottom: 50px;
+}
+.contact-wrap > div:last-child{
+  margin-bottom: 0;
+}
+.contact-wrap > div > h2{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.contact-wrap div ul{display: flex; gap: 50px; margin-left: 30px;}
+.contact-wrap div ul li{}
+.contact-wrap div ul li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-wrap div ul li a img{
+  width: 45px;
+}
+.contact-wrap div ul li a span{
+  opacity: 0;
+  transition: 0.5s ease;
+  margin-top: 10px;
+}
+
+/* contact-footer */
+.contact-wrap .contact-footer p{
+  font-size: 18px;
+  margin-left: 45px;
+  line-height: 1.5rem;
+}
+.contact-wrap .contact-footer p em{
+  font-style: normal;
+  font-weight: 700;
+  color: #007ACC;
+}
+/* contact-link */
+.contact-wrap .contact-link ul{
+  margin-left: 45px;
+}
+/* contact-contact */
+
+
+
+/* hover 효과 */
+.contact-wrap div ul li a:hover span{
+  opacity: 1;
+  color: #007ACC;
+}
+.contact-wrap .contact-link ul li a:hover img{
+  content: url("../../../../public/assets/images/contact-git-hover.png");
+  
+}
+.contact-wrap .contact-contact ul li:nth-child(1) a:hover img{
+  content: url("../../../../public/assets/images/contact-kakao-hover.png");
+}
+.contact-wrap .contact-contact ul li:nth-child(2) a:hover img{
+  content: url("../../../../public/assets/images/contact-email-hover.png");
+}
+
+/* 메일 작성 */
+.contact-mail{
+  flex: 1;
+}

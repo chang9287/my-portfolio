@@ -1,0 +1,50 @@
+.intro{
+  width: 100%;
+  height: inherit;
+  background-color: #fff;
+}
+
+/* Intro-Wrap */
+.intro-wrap {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  gap: 100px;
+}
+.intro-wrap > img{
+  width: 30%;
+  opacity: 0.3;
+}
+
+
+/* Intro-Content */
+.intro-content{
+  padding-top: 200px;
+  font-size: 26px;
+  
+}
+
+.intro-content h1{
+  font-size: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.up-text{
+  margin: 5px 0 10px 0;
+  font-weight: 600;
+  color: #333;
+}
+.up-text em{
+  color: #007ACC;
+  font-style: normal;
+  font-weight: 700;
+}
+.down-text{
+  font-weight: 600;
+  color: #333;
+}
+

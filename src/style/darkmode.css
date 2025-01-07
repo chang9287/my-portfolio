@@ -1,0 +1,187 @@
+/* 다크모드 테마 */
+.dark-mode {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+/* 다크모드 Header */
+.dark-mode .header {
+  background-color: #1f1f1f;
+}
+.dark-mode .header .left-icon li:nth-child(1) a img{
+  content: url("../../public/assets/images/darkmode-left-icon-01.png");
+}
+.dark-mode .header .left-icon li:nth-child(2) a img{
+  content: url("../../public/assets/images/darkmode-left-icon-02.png");
+}
+.dark-mode .header .left-icon li:nth-child(3) a img{
+  content: url("../../public/assets/images/darkmode-left-icon-03.png");
+}
+.dark-mode .header .left-icon li:nth-child(4) a img{
+  content: url("../../public/assets/images/darkmode-left-icon-04.png");
+}
+
+.dark-mode .header .right-icon li:nth-child(1) img{
+  content: url("../../public/assets/images/darkmode-right-icon-line.png");
+}
+.dark-mode .header .right-icon li:nth-child(2) img{
+  content: url("../../public/assets/images/darkmode-right-icon-square.png");
+}
+.dark-mode .header .right-icon li:nth-child(3) img{
+  content: url("../../public/assets/images/darkmode-right-icon-xmark.png");
+}
+
+
+/* 다크모드 Main */
+/* 다크모드 TabContents */
+.dark-mode .tab-content{
+  background-color: #3f3f3f;
+}
+/* 왼쪽 사이드바 */
+.dark-mode .tab-sidebar {
+  background-color: #222222;
+}
+.dark-mode .sidebar-content > button > span{
+  color: #fff;
+} 
+.dark-mode .sidebar-content button:hover{
+  background-color: #2C2C2C;
+}
+/* 오른쪽 탭 */
+.dark-mode .tab-header {
+  background-color: #222222;
+}
+.dark-mode .tab-button {
+  /* 탭 버튼 배경색 */
+  background-color: #1f1d1d;
+}
+.dark-mode .tab-button.active {
+  /* 탭 버튼 엑티브 */
+  background-color: #3f3f3f;
+}
+.dark-mode .tab-button-close > img{
+  /* 탭 헤더 창 닫기 이미지 교체 */
+  content: url("../../public/assets/images/darkmode-tab-button-close.png");
+}
+
+/* 탭 내용 */
+
+/* Intro */
+.dark-mode .intro{
+  background-color: #3f3f3f;
+}
+.dark-mode .intro .intro-wrap img{
+  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(223deg) brightness(95%) contrast(90%);
+}
+.dark-mode .intro .intro-content h1{
+  color: #fff;
+}
+.dark-mode .intro .intro-content p{
+  color: #fff;
+}
+.dark-mode .intro .intro-content p em{
+  color: #7dcbff;
+}
+
+/* About */
+.dark-mode .about{
+  background-color: #3f3f3f;
+}
+
+.dark-mode .profile{
+  background-color: #4b4b4b;
+}
+.dark-mode .profile .profile-image img{
+  filter: brightness(0.9);
+}
+
+.dark-mode .about .skills-wrap{
+  background-color: #4b4b4b;
+}
+
+/* Project */
+.dark-mode .project{
+  background-color: #3f3f3f;
+}
+.dark-mode .slider-container .slick-slider .slick-list .slick-track .slick-slide{
+  background-color: #fcfcfc;
+  color: #333;
+}
+
+
+/* Contact */
+.dark-mode .contact{  
+  background-color: #3f3f3f;
+}
+.dark-mode .contact-footer p em{
+  color: #7dcbff;
+}
+
+.dark-mode .contact-link ul li a:hover span{
+  color: #ffffff;
+}
+.dark-mode .contact-contact ul li a:hover span{
+  color: #ffffff;
+}
+
+.dark-mode .contact-link ul li a img{
+  content: url("../../public/assets/images/contact-darkmode-git.png");
+}
+.dark-mode .contact-link ul li a:hover img{
+  content: url("../../public/assets/images/contact-darkmode-git-hover.png");
+}
+.dark-mode .contact-contact ul li:first-child a img{
+  content: url("../../public/assets/images/contact-darkmode-kakao.png");
+}
+.dark-mode .contact-contact ul li:first-child a:hover img{
+  content: url("../../public/assets/images/contact-darkmode-kakao-hover.png");
+}
+.dark-mode .contact-contact ul li:last-child a img{
+  content: url("../../public/assets/images/contact-darkmode-email.png");
+}
+.dark-mode .contact-contact ul li:last-child a:hover img{
+  content: url("../../public/assets/images/contact-darkmode-email-hover.png");
+}
+
+
+
+/* 모든 탭 창 다 닫았을 때 나타나는 배경 */
+.dark-mode .all-close-bg-content > img{
+  opacity: 0.3;
+}
+
+.dark-mode .close-bg-wrap-list{
+  color: #d8d8d8;
+}
+
+.dark-mode .close-bg-wrap-list > div img{
+  opacity: 0.9;
+}
+
+
+
+/* 다크모드 Footer */
+.dark-mode .footer {
+  background-color: #1f1f1f;
+}
+
+
+@media screen and (max-width:1024px) {
+  .dark-mode .profile{
+    background-color: transparent;
+  }
+  .dark-mode .profile .my-profile{
+    background-color: #4b4b4b;
+  }
+}
+
+/* 
+어두운 회색: #121212 (가장 기본적인 다크모드 색)
+차콜 그레이: #1E1E1E (밝기 약간 추가)
+약간의 블루톤 회색: #242526
+텍스트 색
+
+기본 텍스트(밝은 회색): #E0E0E0
+강조 텍스트(화이트): #FFFFFF
+서브 텍스트(중간 회색): #B0B0B0
+*/
