@@ -1,6 +1,6 @@
 .intro{
   width: 100%;
-  height: inherit;
+  height: 100%;
   background-color: #fff;
 }
 
@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   height: inherit;
-  gap: 100px;
+  gap: 80px;
 }
 .intro-wrap > img{
   width: 30%;
@@ -20,18 +20,42 @@
 }
 
 
+
+
 /* Intro-Content */
 .intro-content{
-  padding-top: 200px;
+  width: 505px;
+  height: 60px;
+  padding-top: 30px;
   font-size: 26px;
   
 }
 
 .intro-content h1{
-  font-size: 40px;
+  font-size: 34px;
   color: #333;
   font-weight: 600;
+  margin-bottom: 20px;
 }
+
+/* 커서 효과 */
+.typing::after {
+  content: '|'; /* 커서 문자 */
+  display: inline-block; /* 블록 레벨 요소로 표시 */
+  animation: blink 1s step-end infinite; /* 깜빡임 효과 */
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
 
 .up-text{
   margin: 5px 0 10px 0;

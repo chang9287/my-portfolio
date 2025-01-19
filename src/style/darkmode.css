@@ -108,6 +108,10 @@
   color: #333;
 }
 
+.dark-mode .card-content{
+  color: #333;
+}
+
 
 /* Contact */
 .dark-mode .contact{  

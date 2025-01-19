@@ -59,7 +59,7 @@ const About = () => {
   const profile = {
     Name : '안창기',
     Birth : '94.03.31',
-    Phone : '010-0000-0000',
+    Phone : '010-8880-9287',
     Email : 'ckdrl9287@gmail.com',
     Education : '한국해양대학교 데이터정보학과 졸업' / '그린컴퓨터아카데미 프론트엔드 과정 수료',
     MBTI : 'ENFJ',

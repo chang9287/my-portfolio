@@ -15,7 +15,9 @@ const ProjectCard = ({project}) => {
 
   return (
     <div className="project-card">
-      <div className="card-image"></div>
+      <div className="card-image">
+        <img src={project.projectImage} alt="Project-Image" />
+      </div>
       <div className="card-content">
         <h2 className='content-title'>{project.title}</h2>
         {/* 작업기간 */}

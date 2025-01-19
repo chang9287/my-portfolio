@@ -88,3 +88,32 @@
 .contact-mail{
   flex: 1;
 }
+
+/* 오픈카톡 모달 창 */
+.modal-container{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  
+}
+.modal-content{
+  width: 400px;
+  height: 400px;
+}
+.modal-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-content > img {
+  width: 100%;
+  border: 5px solid #FEE500;;
+  border-radius: 20px;
+}

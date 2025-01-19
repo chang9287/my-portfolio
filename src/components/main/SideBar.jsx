@@ -21,7 +21,7 @@ const SideBar = ({ isDarkMode, toggleDarkMode }) => {
         <li><img src={`${process.env.PUBLIC_URL}/assets/images/sidebar-down-icon-01.png`} /></li>
         <li>
           <img src={`${process.env.PUBLIC_URL}/assets/images/sidebar-down-icon-02.png`} onClick={toggleDarkMode} />
-          <span>DarkMode</span>
+          <span>{isDarkMode ? "WhiteMode" : "DarkMode"}</span>
         </li>
       </ul>
     </div>

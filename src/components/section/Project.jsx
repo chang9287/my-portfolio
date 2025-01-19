@@ -20,7 +20,7 @@ const Project = () => {
     <div className='project'>
       <Title title={'<Project />'}/>
       <Swiper
-        loop={true}
+        
         spaceBetween={80}
         slidesPerView="auto"
         cssMode={true}

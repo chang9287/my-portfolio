@@ -1,8 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Title from '../common/Title'
 import "../../style/components/section/Contact.css"
 
 const Contact = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  //오픈카톡 모달 열기
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  //오픈카톡 모달 닫기
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  //이메일 복사
+  const copyEmail = () => {
+    const email = "ckdrl9287@gmail.com";
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        alert("이메일이 복사되었습니다");
+      })
+      .catch((err) => {
+        console.error("이메일 복사 실패: ", err);
+      });
+  };
+
   return (
     <div className='contact'>
       <Title title={'<Contact />'} />
@@ -21,7 +45,7 @@ const Contact = () => {
             <h2>{"<Link />"}</h2>
             <ul>
               <li>
-                <a href="#none">
+                <a href="https://github.com/chang9287">
                   <img src={`${process.env.PUBLIC_URL}/assets/images/contact-git.png`} alt="GitHub" />
                   <span>GitHub</span>
                 </a>
@@ -32,13 +56,25 @@ const Contact = () => {
             <h2>{"<Contact />"}</h2>
             <ul>
               <li>
-                <a href="#none">
+                <a 
+                  href="#none"
+                  onClick={(e) => {
+                    e.preventDefault(); // 기본 동작 방지
+                    openModal(); // 모달 열기
+                  }}
+                >
                   <img src={`${process.env.PUBLIC_URL}/assets/images/contact-kakao.png`} alt="OpenKakao" />
                   <span>OpenKakao</span>
                 </a>
               </li>
               <li>
-                <a href="#none">
+                <a 
+                  href="#none"
+                  onClick={(e) => {
+                    e.preventDefault(); // 기본 동작(링크 이동) 방지
+                    copyEmail(); // 이메일 복사 함수 호출
+                  }}
+                >
                   <img src={`${process.env.PUBLIC_URL}/assets/images/contact-email.png`} alt="Email" />
                   <span>Email</span>
                 </a>
@@ -46,8 +82,21 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <div className="contact-mail"></div>
+        <div className="contact-mail">
+          {/* <img src="/assets/images/portfolio-openkakao-talk-image.jpg" alt="" /> */}
+        </div>
       </div>
+      {/* 모달 창 */}
+      {isModalOpen && (
+        <div className="modal-container" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>
+              &times;
+            </button>
+            <img src="/assets/images/portfolio-openkakao-talk-image.jpg" alt="OpenKakao-Talk" />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

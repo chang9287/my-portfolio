@@ -62,12 +62,21 @@
   }
 
   /* Intro */
-  .intro-content{
-    padding-top: 20px;
+  .intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
+  
   .intro-wrap{
     flex-direction: column;
-    gap: 0;
+    gap: 35px;
+    
+  }
+  .intro-content{
+    padding-top: 20px;
+    height: auto;
   }
   .intro-wrap > img{
     width: 40%;
@@ -238,7 +247,12 @@
     text-align: center;
   }
   
-  .intro-content{font-size: 22px;}
+  .intro-content{
+    width: 75%;
+    
+  }
+  .intro-content h1{font-size: 28px;}
+  .intro-content p{font-size: 22px;}
 
   .tab-header{
     padding-left: 0;
@@ -278,6 +292,21 @@
   }
 }
 
+@media screen and (max-width: 630px){
+  .intro-content{
+    width: 70%;
+    
+  }
+  .intro-content h1{font-size: 26px;}
+  .intro-content p{font-size: 20px;}
+}
+
+@media screen and (max-width: 615px){
+  .intro-content{
+    width: 80%;
+  }
+}
+
 @media screen and (max-width:600px) {
   .swiper-button-prev{
     left: 20%;
@@ -287,12 +316,26 @@
   }
 }
 
+@media screen and (max-width: 550px){
+  .intro-content{
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .intro-content{
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .tab-button span{
     font-size: 14px;
   }
 
-  .intro-content{font-size: 18px;}
+  .intro-content {width: 100%; padding-left: 5%;}
+  .intro-content h1{font-size: 24px;}
+  .intro-content p{font-size: 18px;}
 
   .about-container > div {
     width: 90%;
@@ -314,6 +357,16 @@
     transform: scale(0.8);
   }
 
+  .modal-container{
+    width: 300px;
+    height: 300px;
+    
+  }
+  .modal-content{
+    width: 300px;
+    height: 300px;
+  }
+
 }
 @media screen and (max-width: 460px) {
   .contact-wrap .contact-footer p{
@@ -324,6 +377,9 @@
 }
 
 @media screen and (max-width: 430px) {
+  .intro-content h1{font-size: 22px;}
+  .intro-content p{font-size: 16px;}
+
   .tab-button span{
     font-size: 12px;
   }
@@ -361,7 +417,13 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  
+}
+
 @media screen and (max-width:390px) {
+  .intro-content{padding-left: 3%;}
+
   .project .swiper{
     width: 95%;
     height: 100%;
