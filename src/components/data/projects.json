@@ -26,7 +26,7 @@
     "problem": " useContext API를 사용해 App.js에서부터 데이터를 전달 및 props를 통해 하위 컴포넌트 ProductCard까지 차례로 전달했지만, 계속된 오류 발생 |  ",
     "solution": " CartContext를 ProductCard 컴포넌트에 직접 import하고, useContext를 사용해 데이터를 불러오는 방식으로 변경하여 문제를 해결 | ",
     "skill": " https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB | https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white | https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black ",
-    "link": " https://github.com/chang9287/react-shoppingMall-project.git | https://react-changgi-shopping-mall.netlify.app ",
+    "link": " https://github.com/chang9287/react-shoppingMall-project.git | https://changgi-react-shoppingmall.netlify.app ",
     "projectImage": "/assets/images/project-image-03.png"
   },
   {
