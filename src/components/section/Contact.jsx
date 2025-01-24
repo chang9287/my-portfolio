@@ -59,8 +59,8 @@ const Contact = () => {
                 <a 
                   href="#none"
                   onClick={(e) => {
-                    e.preventDefault(); // 기본 동작 방지
-                    openModal(); // 모달 열기
+                    e.preventDefault();
+                    openModal();
                   }}
                 >
                   <img src={`${process.env.PUBLIC_URL}/assets/images/contact-kakao.png`} alt="OpenKakao" />
@@ -71,8 +71,8 @@ const Contact = () => {
                 <a 
                   href="#none"
                   onClick={(e) => {
-                    e.preventDefault(); // 기본 동작(링크 이동) 방지
-                    copyEmail(); // 이메일 복사 함수 호출
+                    e.preventDefault();
+                    copyEmail();
                   }}
                 >
                   <img src={`${process.env.PUBLIC_URL}/assets/images/contact-email.png`} alt="Email" />

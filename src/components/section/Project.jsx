@@ -26,7 +26,7 @@ const Project = () => {
         cssMode={true}
         navigation={true}
         centeredSlides={true}
-        
+        /* allowTouchMove={true} */
         pagination={true}
         keyboard={true}
         modules={[Navigation, Pagination, Keyboard]}

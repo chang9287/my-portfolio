@@ -5,12 +5,12 @@ import About from '../section/About';
 import Project from '../section/Project';
 import Contact from '../section/Contact';
 import { faEllipsis, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import "../../style/components/main/TabContents.css"
 
+import "../../style/components/main/TabContents.css"
 import "../../style/components/section/Contact.css"
 
 const TabContents = () => {
-  const [tabs, setTabs] = useState(['intro.html']); // 초기 탭은 profile만 열림
+  const [tabs, setTabs] = useState(['intro.html']); // 초기 탭은 intro만 열림
   const [activeTab, setActiveTab] = useState('intro.html'); // 현재 활성화된 탭
   const [isSidebarOpen, setIsSidebarOpen] = useState(true); //사이드바 열림/닫힘 이벤트
 
@@ -22,7 +22,7 @@ const TabContents = () => {
     'contact.js' : <Contact />
   };
 
-  // 탭 이미지 매핑
+  // 탭 이미지
   const tabHeaderImg = {
     'intro.html': `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-01.png`,
     'about.jsx': `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-02.png`,
@@ -35,14 +35,14 @@ const TabContents = () => {
     if (!tabs.includes(name)) {
       setTabs([...tabs, name]);
     }
-    setActiveTab(name); // 클릭한 탭을 활성화
+    setActiveTab(name);
   };
 
   // 탭 닫기
   const closeTab = (name) => {
     setTabs(tabs.filter((tab) => tab !== name));
     if (activeTab === name) {
-      setActiveTab(tabs.filter((tab) => tab !== name)[0] || ''); // 다른 탭으로 활성화 이동
+      setActiveTab(tabs.filter((tab) => tab !== name)[0] || '');
     }
   };
 
@@ -59,20 +59,53 @@ const TabContents = () => {
           <FontAwesomeIcon icon={faEllipsis} style={{marginRight:"10px", fontSize:"20px"}} />
         </div>
         <div className="sidebar-wrap">
-          <div className="sidebar-subtitle" style={{ display: "flex" , alignItems:"center", marginBottom:"15px"}} onClick={toggleSideBar}>
-            <FontAwesomeIcon icon={faAngleDown} style={{marginRight:"10px", fontSize:"20px", transform: isSidebarOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.2s ease'}}/>
-            <h3 style={{textTransform:"capitalize", fontSize:"22px", cursor:"pointer"}}>portfolio</h3>
+          <div 
+            className="sidebar-subtitle" 
+            style={{ 
+              display: "flex" , 
+              alignItems:"center", 
+              marginBottom:"15px"
+            }} 
+            onClick={toggleSideBar}
+          >
+            <FontAwesomeIcon 
+              icon={faAngleDown} 
+              style={{
+                marginRight:"10px", 
+                fontSize:"20px", 
+                transform: isSidebarOpen ? 'rotate(0deg)' : 'rotate(-90deg)', transition: 'transform 0.2s ease'
+              }}
+            />
+            <h3 
+              style={{
+                textTransform:"capitalize", 
+                fontSize:"22px", 
+                cursor:"pointer"
+              }}
+            >
+              portfolio
+            </h3>
           </div>
-          <div className="sidebar-content" style={{maxHeight: isSidebarOpen ? '500px' : '0', overflow: 'hidden', transition: 'max-height 0.2s ease'}}>
+          <div 
+            className="sidebar-content" 
+            style={{
+              maxHeight: isSidebarOpen ? '500px' : '0', 
+              overflow: 'hidden', 
+              transition: 'max-height 0.2s ease'}}
+          >
             {[
               {tab: 'intro.html', image: `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-01.png`},
               {tab: 'about.jsx', image: `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-02.png`},
               {tab: 'project.css', image: `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-03.png`},
               {tab: 'contact.js', image: `${process.env.PUBLIC_URL}/assets/images/tab-sidebar-icon-04.png`}].map((list) => (
               <button 
-              style={{display:"flex", justifyContent:"flex-start", alignItems:"center"}} 
-              key={list.tab} 
-              onClick={() => openTab(list.tab)}
+                style={{
+                  display:"flex", 
+                  justifyContent:"flex-start", 
+                  alignItems:"center"
+                }} 
+                key={list.tab} 
+                onClick={() => openTab(list.tab)}
               >
                 <img src={list.image} alt={list.tab} style={{marginRight: "10px"}}/>
                 <span style={{display:"block", fontSize:"18px", fontWeight:"400"}}>{list.tab}</span>
@@ -140,11 +173,8 @@ const TabContents = () => {
                   ))}
                 </ul>
               </div>
-                  
-
             </div>
           </div>
-                  
         </div>
       </div>
     </div>

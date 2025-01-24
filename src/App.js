@@ -7,8 +7,7 @@ import Footer from './components/Footer';
 import "./style/reset/reset.css"
 import "./style/global.css"
 import "./style/darkmode.css"
-import "./style/responsive/tablet.css"
-import "./style/responsive/mobile.css"
+import "./style/responsive/responsive.css"
 
 function App() {
   // 다크모드 상태

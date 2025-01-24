@@ -62,6 +62,10 @@
   margin-bottom: 5px;
   font-size: 14px;
 }
+.swiper-slide:nth-child(4) .project-card .card-content .project-func ul li:nth-child(3){
+  font-size: 11px;
+}
+
 
 /* 개발과정  */
 .project-process{}
@@ -86,6 +90,13 @@
   margin-bottom: 5px;
   font-size: 14px;
   padding-right: 5px;
+  position: relative;
+}
+.project-problem > ul > li::before{
+  content: '·';
+  position: absolute;
+  top: 0;
+  left: -5px;
 }
 
 /* 개발과정 - 해결방안 */
@@ -104,7 +115,34 @@
   margin-bottom: 5px;
   font-size: 14px;
   padding-right: 5px;
+  position: relative;
 }
+.project-solution > ul > li::before{
+  content: '·';
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+/* '·' 지우기 */
+/* 첫 번째 포트폴리오 */
+.swiper-slide:nth-child(1) .project-card .card-content .project-process .project-problem ul li:nth-child(2)::before{
+  display: none;
+}
+.swiper-slide:nth-child(1) .project-card .card-content .project-process .project-solution ul li:nth-child(2)::before{
+  display: none;
+}
+/* 두 번째 포트폴리오 */
+/* 세 번째 포트폴리오 */
+.swiper-slide:nth-child(3) .project-card .card-content .project-process .project-problem ul li:nth-child(2)::before{
+  display: none;
+}
+.swiper-slide:nth-child(3) .project-card .card-content .project-process .project-solution ul li:nth-child(2)::before{
+  display: none;
+}
+/* 네 번째 포트폴리오 */
+
+
 
 /* 기술스택 */
 .project-skill{
